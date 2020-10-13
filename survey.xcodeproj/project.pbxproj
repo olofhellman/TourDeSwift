@@ -123,6 +123,7 @@
 				D527D46222C439B9003A38A2 /* Sources */,
 				D527D46322C439B9003A38A2 /* Frameworks */,
 				D527D46422C439B9003A38A2 /* Resources */,
+				D54E111325364DC800A613A2 /* Verify no build settings */,
 			);
 			buildRules = (
 			);
@@ -179,6 +180,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D54E111325364DC800A613A2 /* Verify no build settings */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Verify no build settings";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcrun -sdk macosx swift buildscripts/VerifyNoBS.swift  --xcode  ${PROJECT_DIR}/${PROJECT_NAME}.xcodeproj/project.pbxproj\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D527D46222C439B9003A38A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -216,7 +238,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D54E111225364C0800A613A2 /* Project-Debug.xcconfig */;
 			buildSettings = {
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 			};
 			name = Debug;
 		};
