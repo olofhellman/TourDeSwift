@@ -1,10 +1,5 @@
 //
 //  AppDelegate.swift
-//  scratcher
-//
-//  Created by Olof Hellman on 6/26/19.
-//  Copyright © 2019 Olof Hellman. All rights reserved.
-//
 
 import Cocoa
 
@@ -17,67 +12,87 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    
         let survey = self.constructSurvey()
         
-        //self.doRandomSurvey(survey)
-
-        self.doMacSurvey(survey)
+        // uncomment any or all of the following:
         
-        //self.doRandomSurveyStatistics(survey)
+        // self.doRandomSurvey(survey)
+
+        // self.doMacSurvey(survey)
+        
+        self.doRandomSurveyStatistics(survey, count:50)
     }
     
-    func doRandomSurvey(_ survey:Survey) {
+    public func mainWindow() -> NSWindow? {
+        return window;
+    }
+
+    private func doRandomSurvey(_ survey:Survey) {
         let filledSurvey = RandomSurveyTaker.fill(survey:survey)
         self.endSurvey(filledSurvey)
     }
 
-    func doMacSurvey(_ survey:Survey) {
+    private func doMacSurvey(_ survey:Survey) {
         MacUISurveyTaker(survey) {
             finishedSurvey in
             self.endSurvey(finishedSurvey)
         }
     }
     
-    func endSurvey(_ survey:Survey?) {
+    private func endSurvey(_ survey:Survey?) {
         survey?.dumpToConsole()
         self.window.close()
         NSApplication.shared.terminate(self)
     }
 
-    func doRandomSurveyStatistics(_ survey:Survey) {
-        var surveyArray:[Survey] = []
-        for i in 0..<100 {
+    private func doRandomSurveyStatistics(_ survey:Survey, count:Int) {
+        var surveys:[Survey] = []
+        for _ in 0..<count {
             if let completedSurvey = RandomSurveyTaker.maybeFill(survey:survey) {
-                surveyArray.append(completedSurvey)
+                surveys.append(completedSurvey)
             }
         }
+        self.printMostPopularAnswers(for:surveys)
+        self.printAllNames(whoTook:surveys)
+        // self.printAllNames(whoTook:surveys, withSubstring:"ry")
+    }
         
-        // what's the most popular answer to "What is Swift?"
-        let whatIsSwiftAnswers:[SurveyAnswer] = surveyArray.compactMap { let (_,a) = $0.questionsAndAnswers[0]
+     private func printMostPopularAnswers(for surveys:[Survey]) {
+       // what's the most popular answer to "What is Swift?"
+        let whatIsSwiftAnswers:[SurveyAnswer] = surveys.compactMap { let (_,a) = $0.questionsAndAnswers[0]
                                                     return a
                                                  }
-        let whatIsSwiftStrings:[String] = whatIsSwiftAnswers.compactMap { if case let SurveyAnswer.string(str) = $0 {
-                                                    return str
-                                                 } else {
-                                                    return nil
-                                                 }}
- 
+        let whatIsSwiftStrings:[String] = whatIsSwiftAnswers.compactMap {
+            if case let SurveyAnswer.string(str) = $0 {
+                                                          return str
+                                                      } else {
+                                                          return nil
+                                                      }}
+
         let whatIsSwiftTable:[String:Int]  = whatIsSwiftStrings.reduce(into:[:]) { table, answer in
             let previousValue = table[answer] ?? 0
             table[answer] = previousValue + 1
         }
 
-        let sortedAnswers = whatIsSwiftTable.sorted(by: {(a,b) in
+        let sortedTuples = whatIsSwiftTable.sorted(by: {(a,b) in
             return a.value > b.value
         })
         
-        print("100 randomly filled surveys:")
-        print("  What is swift? in order of popularity:")
-        sortedAnswers.forEach({ (key, value) in
-             print ("    \(value): \(key)")
-        })
+        let resultString = sortedTuples.reduce(into:"") { (str, tuple) in
+            str = str + "    \(tuple.1): \(tuple.0)\n"
+        }
+        
+        print(
+        """
+        
+          \(surveys.count) randomly filled surveys:
+          What is swift? in order of popularity:
+        \(resultString)
+        """
+        )
+        
+     }
 
- 
-
-        let nameAnswers:[SurveyAnswer] = surveyArray.compactMap { let (_,a) = $0.questionsAndAnswers[2]
+    private func printAllNames(whoTook surveys:[Survey]) {
+       let nameAnswers:[SurveyAnswer] = surveys.compactMap { let (_,a) = $0.questionsAndAnswers[2]
                                                     return a
                                                  }
         let names:[String] = nameAnswers.compactMap { if case let SurveyAnswer.string(str) = $0 {
@@ -87,17 +102,41 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                                  }}
         let uniqueNames = Set(names)
         
-        let ryNames = uniqueNames.filter() { $0.contains("ry") }
-        print("100 randomly filled surveys:")
-        print("  Names that contain a 'ry'")
-        ryNames.forEach({ (name) in
-             print ("    \(name)")
-        })
-
+        print(
+        """
         
+          \(surveys.count) randomly filled surveys:
+        \(uniqueNames)
+        """
+        )
     }
 
-    func constructSurvey() -> Survey {
+    private func printAllNames(whoTook surveys:[Survey], withSubstring substring:String) {
+       let nameAnswers:[SurveyAnswer] = surveys.compactMap { let (_,a) = $0.questionsAndAnswers[2]
+                                                    return a
+                                                 }
+        let names:[String] = nameAnswers.compactMap { if case let SurveyAnswer.string(str) = $0 {
+                                                    return str
+                                                 } else {
+                                                    return nil
+                                                 }}
+        let uniqueNames = Set(names)
+        let substringNames = uniqueNames.filter() { $0.contains(substring) }
+        let substringNamesString = substringNames.reduce(into:"") { (str, nthName) in
+             str = str + "    \(nthName)\n"
+        }
+        
+        print(
+        """
+        
+          \(surveys.count) randomly filled surveys:
+          people with \(substring) in their name:
+        \(substringNamesString)
+        """
+        )
+    }
+
+    private func constructSurvey() -> Survey {
         var survey = Survey()
         let swiftChoices = ["A bird", "A musician named Taylor", "A bank transfer system", "A programming language"]
 
@@ -106,10 +145,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         survey.add(question: SurveyQuestion("What's your name?", defaultAnswer:"<Your Name Here>"))
         
         return survey
-    }
-    
-    func mainWindow() -> NSWindow? {
-        return window;
     }
 }
 

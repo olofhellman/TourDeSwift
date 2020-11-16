@@ -16,7 +16,6 @@
 		D527D47E22C7481E003A38A2 /* SurveyAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D527D47D22C7481E003A38A2 /* SurveyAnswer.swift */; };
 		D527D48022C74947003A38A2 /* QuestionFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D527D47F22C74947003A38A2 /* QuestionFormat.swift */; };
 		D527D48222C74F0D003A38A2 /* RandomSurveyTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D527D48122C74F0D003A38A2 /* RandomSurveyTaker.swift */; };
-		D527D48422C758D2003A38A2 /* StringArray+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D527D48322C758D2003A38A2 /* StringArray+Random.swift */; };
 		D527D48622C759C6003A38A2 /* Int+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D527D48522C759C6003A38A2 /* Int+Random.swift */; };
 		D596715F22C89215006A340D /* MacSurveyTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D596715E22C89215006A340D /* MacSurveyTaker.swift */; };
 		D596716322C896B7006A340D /* MacSurveyTakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D596716222C896B7006A340D /* MacSurveyTakerView.swift */; };
@@ -36,7 +35,6 @@
 		D527D47D22C7481E003A38A2 /* SurveyAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAnswer.swift; sourceTree = "<group>"; };
 		D527D47F22C74947003A38A2 /* QuestionFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFormat.swift; sourceTree = "<group>"; };
 		D527D48122C74F0D003A38A2 /* RandomSurveyTaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSurveyTaker.swift; sourceTree = "<group>"; };
-		D527D48322C758D2003A38A2 /* StringArray+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringArray+Random.swift"; sourceTree = "<group>"; };
 		D527D48522C759C6003A38A2 /* Int+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
 		D54E110D25364C0800A613A2 /* Project-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
 		D54E110E25364C0800A613A2 /* scratcher-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "scratcher-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,11 +82,10 @@
 				D596715E22C89215006A340D /* MacSurveyTaker.swift */,
 				D596716222C896B7006A340D /* MacSurveyTakerView.swift */,
 				D5F0B5A022D07BD700CFF1A3 /* MacSurveyTakerView.xib */,
-				D527D48322C758D2003A38A2 /* StringArray+Random.swift */,
+				D527D48122C74F0D003A38A2 /* RandomSurveyTaker.swift */,
 				D527D48522C759C6003A38A2 /* Int+Random.swift */,
 				D527D47922C747EC003A38A2 /* Survey.swift */,
 				D527D47B22C747FC003A38A2 /* Surveyor.swift */,
-				D527D48122C74F0D003A38A2 /* RandomSurveyTaker.swift */,
 				D527D47D22C7481E003A38A2 /* SurveyAnswer.swift */,
 				D527D47722C747D3003A38A2 /* SurveyQuestion.swift */,
 				D527D47F22C74947003A38A2 /* QuestionFormat.swift */,
@@ -213,7 +210,6 @@
 				D527D47A22C747EC003A38A2 /* Survey.swift in Sources */,
 				D596716322C896B7006A340D /* MacSurveyTakerView.swift in Sources */,
 				D527D48222C74F0D003A38A2 /* RandomSurveyTaker.swift in Sources */,
-				D527D48422C758D2003A38A2 /* StringArray+Random.swift in Sources */,
 				D527D46A22C439B9003A38A2 /* AppDelegate.swift in Sources */,
 				D527D48622C759C6003A38A2 /* Int+Random.swift in Sources */,
 				D527D47822C747D3003A38A2 /* SurveyQuestion.swift in Sources */,

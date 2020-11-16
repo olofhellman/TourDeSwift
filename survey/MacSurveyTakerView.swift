@@ -30,8 +30,7 @@ class MacSurveyTakerView: NSView {
         super.init(coder:coder)
     }
 
-
-    func present(_ question:SurveyQuestion) {
+    public func present(_ question:SurveyQuestion) {
          currentQuestion = question
          textField?.isHidden = true
          popupButton?.isHidden = true
@@ -85,7 +84,7 @@ class MacSurveyTakerView: NSView {
         }
     }
     
-    func answer() -> SurveyAnswer? {
+    public func answer() -> SurveyAnswer? {
          guard let theQuestion = currentQuestion else {
              return nil
          }
@@ -113,9 +112,10 @@ class MacSurveyTakerView: NSView {
                     }
                 }
                 return nil
-
         }
-        return nil
+        
+        // uncomment the next line to see a warning
+        // return nil
     }
     
     @IBAction func doNext(_ sender: Any) {

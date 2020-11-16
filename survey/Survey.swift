@@ -15,15 +15,15 @@ struct Survey {
         questionsAndAnswers = []
     }
     
-    mutating func add(question surveyQuestion:SurveyQuestion) {
+    public mutating func add(question surveyQuestion:SurveyQuestion) {
         questionsAndAnswers.append((surveyQuestion, nil))
     }
     
-    mutating func add(question surveyQuestion:SurveyQuestion, andAnswer answer:SurveyAnswer?) {
+    public mutating func add(question surveyQuestion:SurveyQuestion, andAnswer answer:SurveyAnswer?) {
         questionsAndAnswers.append((surveyQuestion, answer))
     }
     
-    func dumpToConsole() {
+    public func dumpToConsole() {
         for (question, answer) in self.questionsAndAnswers {
            print("Q:\(question.text)")
            

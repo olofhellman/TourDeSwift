@@ -47,7 +47,7 @@ class RandomSurveyTaker : Surveyor {
     
     class func ridiculousName() -> String {
         let firstWords = ["Theon", "Cersei", "Sansa", "Arya", "Jon", "Daenerys", "Gregor", "Tyrian", "Brienne", "Ramsey", "Khal", "Missandei", "Samwell", "Ellaria", "Ygritte", "Jora", "Tywin", "Gilly"]
-        let secondWords = ["Kirk", "McCoy", "Sulu", "Picard", "Riker", "Uhura", "Sisko", "Troi", "Janeway", "Pike", "Chekov", "Crusher", "La Forge", "Yar", "Nerys", "Torres", "Burnham", "O'Brien", "Worf"]
+        let secondWords = ["Kirk", "McCoy", "Sulu", "Picard", "Riker", "Uhura", "Sisko", "Troi", "Janeway", "Pike", "Chekov", "Crusher", "La Forge", "Yar", "Nerys", "Torres", "Burnham", "of Nine", "O'Brien", "Tilly", "Worf", "Georgiou"]
 
         let firstName = firstWords.randomElement() ?? ""
         let secondName = secondWords.randomElement() ?? ""

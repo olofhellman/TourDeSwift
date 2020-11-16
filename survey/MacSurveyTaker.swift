@@ -19,7 +19,7 @@ class MacUISurveyTaker : NSObject, Surveyor  {
     var completionHandler:(Survey) -> Void
     @IBOutlet var surveyTakerView:MacSurveyTakerView?
     
-    required init  (_ unfilledSurvey:Survey, finished: @escaping (Survey) -> Void)  {
+    required init (_ unfilledSurvey:Survey, finished: @escaping (Survey) -> Void)  {
         completionHandler = finished
         survey = unfilledSurvey
         completedSurvey = Survey()
@@ -61,7 +61,7 @@ class MacUISurveyTaker : NSObject, Surveyor  {
         //record current answer
         let surveyAnswer = surveyTakerView?.answer()
         if let question = currentQuestion   {
-            completedSurvey.add(question:question, andAnswer: surveyAnswer)
+            completedSurvey.add(question:question, andAnswer:surveyAnswer)
         }
         
         // see if we are done with survey

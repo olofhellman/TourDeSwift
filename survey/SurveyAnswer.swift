@@ -12,7 +12,7 @@ enum SurveyAnswer {
     case string(String)
     case ratingOnRatingScale(Int, Int)
     
-    func dumpToConsole() {
+    public func dumpToConsole() {
         switch self {
             case .string(let str):
             print("A: \(str)")

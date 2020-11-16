@@ -24,125 +24,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "95EF0302-A35E-4E0A-9ACC-31D104B50F54"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "survey/AppDelegate.swift"
-            timestampString = "585886343.415123"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "doRandomSurveyStatistics(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "95EF0302-A35E-4E0A-9ACC-31D104B50F54 - 77e5fb36d296abca"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "survey.AppDelegate.doRandomSurveyStatistics(survey.Survey) -&gt; ()"
-                  moduleName = "survey"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Shared/git/survey/survey/AppDelegate.swift"
-                  timestampString = "584099747.394569"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1228">
-               </Location>
-               <Location
-                  uuid = "95EF0302-A35E-4E0A-9ACC-31D104B50F54 - 66ed5e31ec375c1b"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (inout Swift.Dictionary&lt;Swift.String, Swift.Int&gt;, Swift.String) -&gt; () in survey.AppDelegate.doRandomSurveyStatistics(survey.Survey) -&gt; ()"
-                  moduleName = "survey"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Shared/git/survey/survey/AppDelegate.swift"
-                  timestampString = "584099747.3965"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "143">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "732B69A1-6D8D-4594-A9D2-974CF0E7D6AF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "survey/AppDelegate.swift"
-            timestampString = "585886343.415179"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "doRandomSurveyStatistics(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E94A019F-478E-48E5-818D-C3D9DE7AB3BE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "survey/AppDelegate.swift"
-            timestampString = "585886343.415217"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "doRandomSurveyStatistics(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E94A019F-478E-48E5-818D-C3D9DE7AB3BE - 77e5fb36d296abca"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "survey.AppDelegate.doRandomSurveyStatistics(survey.Survey) -&gt; ()"
-                  moduleName = "survey"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Shared/git/survey/survey/AppDelegate.swift"
-                  timestampString = "584099783.673375"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "1606">
-               </Location>
-               <Location
-                  uuid = "E94A019F-478E-48E5-818D-C3D9DE7AB3BE - 53e9831468aba903"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 ((key: Swift.String, value: Swift.Int), (key: Swift.String, value: Swift.Int)) -&gt; Swift.Bool in survey.AppDelegate.doRandomSurveyStatistics(survey.Survey) -&gt; ()"
-                  moduleName = "survey"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Shared/git/survey/survey/AppDelegate.swift"
-                  timestampString = "584099783.676103"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "55">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E912418B-B87A-43A7-BF22-5219BF472532"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -153,8 +34,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
             endingLineNumber = "57"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "present(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -170,8 +51,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "present(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
